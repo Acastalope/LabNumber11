@@ -14,25 +14,25 @@ public class CarApp {
 		Car[] year = new Car [3];
 		Car[] price = new Car [4];
 		
-		while(contin.equalsIgnoreCase("y")) {
+		while(contin.equalsIgnoreCase("y")) { // while loop to continue prompting user while they enter "y" or "Y" to the question of whether or not they want to continue
 			System.out.println("Welcome to the Grand Circus Motors admin console!");	
 			System.out.println("\nHow many cars are you entering? ");	
 
 			int input = sc.nextInt();	
 			sc.nextLine();
 			System.out.println("\nCar Make: ");
-			String userMakeSelect= sc.nextLine();
+			String userMakeSelect= sc.nextLine(); // taking in user input as a string
 
 			System.out.println("\nCar Model: "); 
-			String userModelSelect= sc.nextLine();
+			String userModelSelect= sc.nextLine(); // taking in user input as a string
 
 			System.out.println("\nCar Year: ");
-			int yearCar = sc.nextInt();	
+			int yearCar = sc.nextInt();	// taking in user input as an int
 
 			System.out.println("\nCar Price: "); 
-			double priceCar = sc.nextDouble();	
+			double priceCar = sc.nextDouble(); // taking in user input as a double
 
-			ArrayList<Car> cars = new ArrayList<Car>();
+			ArrayList<Car> cars = new ArrayList<Car>(); // trying to make ArrayList of the user input on car make, model, year, and price
 					
 			cars.add(new Car(userMakeSelect, userModelSelect, yearCar, priceCar));
 			
