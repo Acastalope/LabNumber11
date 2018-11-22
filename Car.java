@@ -2,19 +2,17 @@
 // For each car, ask the user for the make, model, year, and price of the car
 package LabNumber11;
 
+import java.text.DecimalFormat;
+
 public class Car {
 
 	private String carMake;
 	private String carModel;
 	private int carYear;
 	private double carPrice;
-	
-	public Car () {
-		carMake = "Angela";
-		carModel = "Castaneda";
-		carYear = 2000;
-		carPrice = 100000.00;
-		
+	DecimalFormat df = new DecimalFormat("#.00");
+
+	public Car() {
 	}
 
 	public Car(String carMake, String carModel, int carYear, double carPrice) {
@@ -59,11 +57,8 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "[carMake = " + carMake + ", carModel = " + carModel + ", carYear = " + carYear + ", carPrice = " + carPrice
-				+ "]";
-		
-	}
-	
-	
+		return String.format("Make = " + carMake + ", Model = " + carModel + ", Year = " + carYear
+				+ ", Price = $" + df.format(carPrice));
 
+	}
 }
